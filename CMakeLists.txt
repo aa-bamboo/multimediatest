@@ -14,6 +14,7 @@ find_package(Qt${QT_VERSION_MAJOR} COMPONENTS Concurrent REQUIRED)
 find_package(Qt${QT_VERSION_MAJOR} COMPONENTS PrintSupport REQUIRED)
 find_package(Qt${QT_VERSION_MAJOR} COMPONENTS LinguistTools REQUIRED)
 find_package(Qt6 COMPONENTS Core5Compat REQUIRED)
+find_package(Qt${QT_VERSION_MAJOR} COMPONENTS WebEngineCore WebEngineWidgets WebEngineQuick REQUIRED)
 
 qt_add_executable(appmultimediatest
     main.cpp
@@ -48,4 +49,8 @@ target_link_libraries(appmultimediatest
     Qt${QT_VERSION_MAJOR}::Sql
     Qt${QT_VERSION_MAJOR}::Concurrent
     Qt${QT_VERSION_MAJOR}::PrintSupport
-    Qt6::Core5Compat)
+    Qt6::WebEngineQuick
+    Qt6::WebEngineCore
+    Qt6::WebEngineWidgets
+    Qt6::Core5Compat
+)

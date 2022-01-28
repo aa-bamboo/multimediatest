@@ -1,9 +1,12 @@
 #include <QApplication>
 #include <QQmlApplicationEngine>
-
+#include <QtWebEngineCore>
+#include <QtWebEngineQuick>
 
 int main(int argc, char *argv[])
 {
+    QtWebEngineQuick::initialize();
+
     QApplication app(argc, argv);
 
     QQmlApplicationEngine engine;
